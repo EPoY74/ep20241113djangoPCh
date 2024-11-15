@@ -1,8 +1,8 @@
-# # from django.db import models
-# from django.shortcuts import render
-#
-#
+from django.db import models
+
 # # Create your models here.
-#
-# def index_page(request):
-#     return render(request, "index.html")
+
+class Workers(models.Model):
+    name = models.CharField(max_length=20, blank=False)
+    second_name = models.CharField(max_length=35)
+    salary = models.DecimalField(max_digits=8, decimal_places=2, default=0)
